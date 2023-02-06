@@ -7,12 +7,14 @@ import PageNotFound from "../pages/PageNotFound";
 import BuyRoute from "./BuyRoute";
 import OrderRoute from "./OrderRoute";
 import AdminRoute from "./AdminRoute";
+import NavBar from "../components/nav/NavBar";
 
 interface Props {}
 
 const Routes: React.FC<Props> = () => {
   return (
     <>
+      <NavBar />
       <Switch>
         <Route path={"/buy"}>
           <BuyRoute />
