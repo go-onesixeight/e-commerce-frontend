@@ -14,7 +14,6 @@ interface Props {}
 const Routes: React.FC<Props> = () => {
   return (
     <>
-      <NavBar />
       <Switch>
         <Route path={"/buy"}>
           <BuyRoute />

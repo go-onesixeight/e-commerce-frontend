@@ -11,7 +11,7 @@ const NavBar: React.FC<Props> = () => {
           <NavLink className={"list-link"} to={"/"}>
             Home
           </NavLink>
-          <NavLink className={"list-link"} to={"/product"}>
+          <NavLink className={"list-link"} to={"/products"}>
             Products
           </NavLink>
           <NavLink className={"list-link"} to={"/buy/my-cart"}>
