@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./routes/Route";
 import Layout from "./Layout";
+import './fontawesome/index'
 
 function App() {
   return (

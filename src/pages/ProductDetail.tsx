@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { products, Product } from "../data/products";
 import PageNotFound from "./PageNotFound";
+import Button from "../components/button.tsx/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Props {}
 
@@ -48,14 +50,18 @@ const ProductDetail: React.FC<Props> = () => {
             </p>
           </div>
           <div className="product-detail__sub-section quantity-control">
-            <div className="qty-action">-</div>
+            <div className="qty-action">
+              <FontAwesomeIcon icon={["fas", "minus"]} size="xs" color="grey" />
+            </div>
             <div className="qty-action qty-action--qty">
               <p className="paragraph">1</p>
             </div>
-            <div className="qty-action">+</div>
+            <div className="qty-action">
+              <FontAwesomeIcon icon={["fas", "plus"]} size="xs" color="grey" />
+            </div>
           </div>
 
-          <button>Add to cart</button>
+          <Button>Add to cart</Button>
         </div>
       </div>
     </>
