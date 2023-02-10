@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Button from "../button.tsx/Button";
 
 interface Props {}
 
@@ -8,33 +9,26 @@ const NavBar: React.FC<Props> = () => {
     <>
       <header className="head">
         <div className="head__section">
-          <NavLink className={"list-link"} to={"/"}>
-            Home
-          </NavLink>
-          <NavLink className={"list-link"} to={"/products"}>
-            Products
-          </NavLink>
-          <NavLink className={"list-link"} to={"/buy/my-cart"}>
-            Cart
-          </NavLink>
-          <NavLink className={"list-link"} to={"/buy/select-address"}>
-            Select Address
-          </NavLink>
-          <NavLink className={"list-link"} to={"/buy/checkout"}>
-            Checkout
-          </NavLink>
-          <NavLink className={"list-link"} to={"/orders/my-orders"}>
-            Orders
-          </NavLink>
-          <NavLink className={"list-link"} to={"/admin/manage-products"}>
-            Manage Products
-          </NavLink>
-          <NavLink className={"list-link"} to={"/admin/manage-orders"}>
-            Manage Orders
-          </NavLink>
-          <NavLink className={"list-link"} to={"/admin/manage-users"}>
-            Manage Users
-          </NavLink>
+          <div className="head__logo">
+            <NavLink to={"/"}>
+              <h2 className="header header--logo">e-Commerce</h2>
+            </NavLink>
+          </div>
+          <div className="head__search">
+            <div className="search-input">
+              <input type="text" className="search" placeholder="Search" />
+            </div>
+            <Button className="btn--search">SEARCH</Button>
+          </div>
+          <div className="head__navbar">
+            <ul className="navbar">
+              <div className="navbar__lists"></div>
+              <div className="navbar__profile">
+                <Button className="btn--sign">Sign in</Button>
+                <Button className="btn--sign">Sign up</Button>
+              </div>
+            </ul>
+          </div>
         </div>
       </header>
     </>
@@ -42,3 +36,33 @@ const NavBar: React.FC<Props> = () => {
 };
 
 export default NavBar;
+
+{
+  /* <NavLink className={"list-link"} to={"/"}>
+Home
+</NavLink>
+<NavLink className={"list-link"} to={"/products"}>
+Products
+</NavLink>
+<NavLink className={"list-link"} to={"/buy/my-cart"}>
+Cart
+</NavLink>
+<NavLink className={"list-link"} to={"/buy/select-address"}>
+Select Address
+</NavLink>
+<NavLink className={"list-link"} to={"/buy/checkout"}>
+Checkout
+</NavLink>
+<NavLink className={"list-link"} to={"/orders/my-orders"}>
+Orders
+</NavLink>
+<NavLink className={"list-link"} to={"/admin/manage-products"}>
+Manage Products
+</NavLink>
+<NavLink className={"list-link"} to={"/admin/manage-orders"}>
+Manage Orders
+</NavLink>
+<NavLink className={"list-link"} to={"/admin/manage-users"}>
+Manage Users
+</NavLink> */
+}
