@@ -6,10 +6,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = forwardRef(
-  (
-    { label, error, type = "text", ...props }: Props,
-    ref: Ref<HTMLInputElement>
-  ) => {
+  ({ label, error, type, ...props }: Props, ref: Ref<HTMLInputElement>) => {
     return (
       <>
         <div className="form__input-container">
