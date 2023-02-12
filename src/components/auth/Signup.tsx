@@ -15,7 +15,7 @@ const Sigup: React.FC<Props> = () => {
 
   const handelSignup = handleSubmit(async (data) => {
     const response = await signup(data);
-    console.log("handelSignup response =>", response)
+    console.log("handelSignup response =>", response);
 
     if (response) setModalType("close");
   });
