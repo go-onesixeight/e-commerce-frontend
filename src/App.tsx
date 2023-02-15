@@ -5,11 +5,13 @@ import Routes from "./routes/Route";
 import Layout from "./Layout";
 import "./fontawesome/index";
 import ModalContextProvider from "./state/modalContext";
+import AuthContextProvider from "./state/authContext";
 
 function App() {
   return (
     <>
       <div className="App">
+        <AuthContextProvider>
         <ModalContextProvider>
           <BrowserRouter>
             <Layout>
@@ -17,6 +19,7 @@ function App() {
             </Layout>
           </BrowserRouter>
         </ModalContextProvider>
+        </AuthContextProvider>
       </div>
     </>
   );

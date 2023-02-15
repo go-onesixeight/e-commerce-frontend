@@ -2,10 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../button.tsx/Button";
 import { ModalContext, useModalContext } from "../../state/modalContext";
+import { useAuthContext } from "../../state/authContext";
 
 interface Props {}
 
 const NavBar: React.FC<Props> = () => {
+  const {authUser} = useAuthContext()
   const { setModalType } = useModalContext();
   
   return (
