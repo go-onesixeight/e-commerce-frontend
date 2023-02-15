@@ -82,7 +82,7 @@ export const useAuthContext = () => {
   if (authState === undefined || authDispatch === undefined)
     throw new Error("useAuthContext must be used with in AuthContextProvider.");
 
-  return { ...authState, ...authDispatch };
+  return { authState, authDispatch };
 };
 
 export default AuthContextProvider;
